@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"github.com/krishnapramodaradhi/expense-tracker/internal/config"
+)
 
 func main() {
-	fmt.Println("This works")
+	s := config.NewServer(":8443")
+	s.Start()
 }
